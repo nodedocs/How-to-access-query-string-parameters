@@ -27,4 +27,4 @@ Then you can try out by pointing your browser to [http://localhost:8080](http://
 * [http://localhost:8080/?a=1&b=abcdef+2](http://localhost:8080/?a=1&b=abcdef+2)
 * [http://localhost:8080/big/deep/path?a=1&b=%2Fabcdef+2](http://localhost:8080/big/deep/path?a=1&b=%2Fabcdef+2)
 
-You should see the parsed query string object printed out in the browser.
+You should see the parsed query string object printed out in the browser on each request that you make.
