@@ -2,15 +2,17 @@
 
 In Node, functionality to aid in the accessing of URL query string parameters is built into the standard library. The built-in `url.parse` method takes care of most of the heavy lifting for us.  Here is an example script using this handy function and an explanation on how it works:
 
-  var http = require('http');
-	var url = require('url') ;
-	var inspect = require('util').inspect;
+```
+var http = require('http');
+var url = require('url') ;
+var inspect = require('util').inspect;
 
-	http.createServer(function (req, res) {
-	  var queryObject = url.parse(req.url,true).query;
-	  res.writeHead(200);
-	  res.end(inspect(queryObject));
-	}).listen(8080);
+http.createServer(function (req, res) {
+  var queryObject = url.parse(req.url,true).query;
+  res.writeHead(200);
+  res.end(inspect(queryObject));
+}).listen(8080);
+```
 
 The key part of this whole script is this line: `var queryObject = url.parse(req.url,true).query;`. Let's take a look at things from the inside-out.  
 
